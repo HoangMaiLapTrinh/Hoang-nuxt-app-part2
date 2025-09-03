@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "proj_root": "/mnt/data/_audit_current/hoang-nuxt-app/my-nuxt-app",
+    "has_home_sections_vue": true,
+    "home_sections_snippet": "<script setup lang=\"ts\">\ninterface HomeSection {\n  id: string | number\n  title?: string\n  created_at?: string\n}\nconst props = withDefaults(defineProps<{\n  sections?: HomeSection[]\n  title?: string\n}>(), {\n  sections: () => []\n})\n</script>\n\n<template>\n  <section class=\"container py-4\">\n    <h2 class=\"mb-3\">{{ title || 'Homes' }}</h2>\n    <ul v-if=\"sections?.length\">\n      <li v-for=\"item in section",
+    "suspects": [
+      "src/composables/useHomeSections.ts"
+    ],
+    "plugin_files": [
+      "src/plugins/axios.ts",
+      "src/plugins/bootstrap.client.ts",
+      "src/plugins/supabase.client.ts",
+      "src/plugins/theme.client.ts",
+      "src/plugins/ui.client.ts"
+    ]
+  },
+  "home_sections_path": "src/components/HomeSections.vue",
+  "files_sample": [
+    "src/composables/useApi.ts",
+    "src/composables/useHomeSections.ts",
+    "src/composables/usePosts.ts",
+    "src/components/HomeSections.vue"
+  ]
+}
